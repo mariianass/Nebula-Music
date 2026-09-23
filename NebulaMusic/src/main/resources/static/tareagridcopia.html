@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réplica Formulario Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F2E7DF;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .parent {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 80px 70px 1fr 1fr 80px;
+            gap: 15px;
+            width: 100vw;
+            height: 100vh;
+            background-color: #D6C7BC;
+            border: 3px solid #590C2F;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .parent div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Posicionamiento exacto mediante coordenadas:
+           grid-area: fila-inicio / col-inicio / fila-fin / col-fin;
+        */
+
+        .header {
+            grid-area: 1 / 1 / 2 / 4;
+            background-color: #FCF5C7;
+            color: #1F020F;
+        }
+
+        .navigation {
+            grid-area: 2 / 1 / 3 / 4;
+            background-color: #C7F0FC;
+            color: #1F020F;
+        }
+
+        .aside {
+            grid-area: 3 / 1 / 5 / 2;
+            background-color: #FCC7DA;
+            color: #1F020F;
+        }
+
+        .content {
+            grid-area: 3 / 2 / 4 / 4;
+            background-color: #D5C7FC;
+            color: #1F020F;
+        }
+
+        .section {
+            grid-area: 4 / 2 / 5 / 4;
+            background-color: #FCC7E1;
+            color: #1F020F;
+        }
+
+        .footer {
+            grid-area: 5 / 1 / 6 / 4;
+            background-color: #E9FCC7;
+            color: #1F020F;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <div class="header">Header</div>
+        <div class="navigation">Navigation</div>
+        <div class="aside">Aside</div>
+        <div class="content">Content</div>
+        <div class="section">Section</div>
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+</html>

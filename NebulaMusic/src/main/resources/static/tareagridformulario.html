@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Explore</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333333;
+            padding: 20px 40px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .logo-search {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .badge-logo {
+            background-color: #e60023;
+            color: white;
+            font-weight: bold;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .search-bar {
+            background-color: #f1f1f1;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 20px;
+            width: 250px;
+            color: #767676;
+            outline: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #767676;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        nav a.active {
+            color: #111111;
+        }
+
+        .title-section {
+            margin-bottom: 30px;
+        }
+
+        .title-section h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .categories {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .categories li a {
+            text-decoration: none;
+            color: #767676;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-auto-rows: 150px;
+            gap: 15px;
+            grid-auto-flow: dense;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* Variaciones de tamaño */
+        .item-tall {
+            grid-row: span 2;
+        }
+
+        .item-very-tall {
+            grid-row: span 3;
+        }
+
+        .item-wide {
+            grid-column: span 2;
+        }
+
+        /* Media Queries */
+        @media (max-width: 900px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .item-wide {
+                grid-column: span 1;
+            }
+
+            .search-bar {
+                width: 130px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-search">
+        <div class="badge-logo">P</div>
+        <input type="text" class="search-bar" placeholder="Search...">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Post</a></li>
+            <li><a href="#">Author</a></li>
+            <li><a href="#">...</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="title-section">
+    <h1>Explore</h1>
+    <ul class="categories">
+        <li><a href="#">Lifestyle</a></li>
+        <li><a href="#">Food</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Travel</a></li>
+        <li><a href="#">More ▾</a></li>
+    </ul>
+</section>
+
+<section class="gallery-grid">
+    <div class="gallery-item item-tall">
+        <img src="imgs/amigos.jpg" alt="Amigos">
+    </div>
+
+    <div class="gallery-item item-very-tall">
+        <img src="imgs/pelicula.jpg" alt="Pelicula">
+    </div>
+
+    <div class="gallery-item item-wide">
+        <img src="imgs/car-ride.jpg" alt="Car ride">
+    </div>
+
+    <div class="gallery-item">
+        <img src="imgs/sushi.jpg" alt="Sushi">
+    </div>
+
+    <div class="gallery-item item-tall">
+        <img src="imgs/natacion.jpg" alt="Natación">
+    </div>
+
+    <div class="gallery-item item-tall">
+        <img src="imgs/coser.jpg" alt="Coser">
+    </div>
+
+    <div class="gallery-item">
+        <img src="imgs/dormir.jpg" alt="Dormir">
+    </div>
+
+    <div class="gallery-item item-very-tall">
+        <img src="imgs/playa.jpg" alt="Playa">
+    </div>
+
+    <div class="gallery-item item-wide">
+        <img src="imgs/pool.jpg" alt="Pool">
+    </div>
+
+    <div class="gallery-item item-tall">
+        <img src="imgs/rompecabezas.jpg" alt="Rompecabezas">
+    </div>
+
+    <div class="gallery-item">
+        <img src="imgs/caminar.jpg" alt="Caminar">
+    </div>
+
+    <div class="gallery-item">
+        <img src="imgs/travel.jpg" alt="Viajar">
+    </div>
+
+    <div class="gallery-item item-wide">
+        <img src="imgs/serie.jpg" alt="Serie">
+    </div>
+
+    <div class="gallery-item">
+        <img src="imgs/olivia.jpg" alt="Olivia">
+    </div>
+</section>
+
+</body>
+</html>
