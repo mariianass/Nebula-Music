@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nébula Music - Inicio (Código Base)</title>
+    <title>Nébula Music - Inicio</title>
     <link rel="stylesheet" href="../static/styles/styles.css">
 </head>
 <body>
@@ -28,44 +28,56 @@
         </ul>
     </nav>
 
-    <!-- CABECERA -->
+    <!-- CABECERA PRINCIPAL -->
     <header class="principal">
-        <img src="../static/imgs/cover.jpg" alt="Cover Nébula" width="100%" height="200" style="object-fit: cover;">
-        <h1>Tu música en la nube y en tu espacio.</h1>
+        <img src="../static/imgs/cover.jpg" alt="Cover Nébula">
+        <h1>Tu música en la <span>nube</span> y en tu <span>espacio</span>.</h1>
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main>
-        
+
         <!-- SECCIÓN DE NOTICIAS -->
         <section id="noticias">
             <h2>Novedades de la Semana</h2>
 
-            <!-- Artículo 1 -->
-            <article>
-                <h3>Taylor Swift en su nueva era</h3>
-                <p>El nuevo disco de Taylor, <i>"The life of a showgirl"</i> saldrá a la venta el 3 de octubre.</p>
-            </article>
+            <div class="contenedor-cartas">
+                <!-- Artículo 1 -->
+                <article>
+                    <img src="../static/imgs/taylor.jpg" alt="Taylor Swift">
+                    <div class="contenido">
+                        <h3>Taylor Swift en su nueva era</h3>
+                        <p>El nuevo disco de Taylor, <i>"The life of a showgirl"</i> saldrá a la venta el 3 de octubre.</p>
+                    </div>
+                </article>
 
-            <!-- Artículo 2 -->
-            <article>
-                <h3>Oasis</h3>
-                <p>Los hermanos Liam y Noel Gallagher se reencontrarán con sus fans y traerán un setlist espectacular.</p>
-            </article>
+                <!-- Artículo 2 -->
+                <article>
+                    <img src="../static/imgs/oasis.jpg" alt="Oasis">
+                    <div class="contenido">
+                        <h3>Oasis: El Reencuentro</h3>
+                        <p>Los hermanos Liam y Noel Gallagher se reencontrarán con sus fans y traerán un setlist espectacular.</p>
+                    </div>
+                </article>
 
-            <!-- Artículo 3 -->
-            <article>
-                <h3>Los Reztos en concierto</h3>
-                <p>Gran éxito en el concierto tributo a Marea en Ciudad Obregón.</p>
-            </article>
+                <!-- Artículo 3 -->
+                <article>
+                    <img src="../static/imgs/reztos.jpg" alt="Los Reztos">
+                    <div class="contenido">
+                        <h3>Los Reztos en concierto</h3>
+                        <p>Gran éxito en el concierto tributo a Marea en Ciudad Obregón.</p>
+                    </div>
+                </article>
+            </div>
 
         </section>
 
     </main>
 
     <!-- PIE DE PÁGINA -->
-    <footer>
+    <footer class="inicio-footer">
         <p>Copyright Nébula 2025.</p>
+        <a href="#">Términos y condiciones</a>
     </footer>
 
 </body>

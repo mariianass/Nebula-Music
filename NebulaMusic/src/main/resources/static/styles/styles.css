@@ -167,11 +167,12 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-content: rgba(19,18,0,0.95);
-    padding: 15px 30px;
+    padding: 8px 30px;
     border-bottom: 2px solid #2a280a;
     position: sticky;
     top: 0;
     z-index: 100;
+    background-color: rgba(19, 18, 0, 0.80);
 }
 
 #menu-toggle {
@@ -244,5 +245,120 @@ nav a:hover {
 
     #menu-toggle:checked ~ .menu-button span:nth-child(3) {
         transform: rotate(45deg) translate(5px, -5px);
+    }
+}
+
+header.principal {
+    position: relative;
+    text-align: center;
+}
+
+header.principal img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+header.principal h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color-dark);
+}
+
+header.principal h1 span {
+    color: var(--highlight);
+}
+
+#noticias {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+#noticias h2 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.contenedor-cartas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+#noticias article {
+    background-color: var(--card-bg-dark);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #2a280a;
+}
+
+#noticias article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+#noticias article .contenido {
+    padding: 15px;
+}
+
+#noticias article h3 {
+    color: var(--highlight);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+#noticias article p {
+    font-size: 0.9rem;
+    color: #cbd5e0;
+}
+
+.inicio-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-color-dark);
+    border-top: 1px solid #2a280a;
+    font-size: 0.85rem;
+}
+
+.inicio-footer a {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+    header.principal img {
+        height: 320px;
+    }
+
+    header.principal h1 {
+        font-size: 2.2rem;
+    }
+
+    .contenedor-cartas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    header.principal img {
+        height: 380px;
+    }
+
+    header.principal h1 {
+        font-size: 2.6rem;
+    }
+
+    .contenedor-cartas {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
